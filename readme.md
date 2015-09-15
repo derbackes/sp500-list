@@ -1,6 +1,7 @@
 Examples
 ========
 
+```
 var spList = require('sp500-list'),  
     yahooFinance = require('yahoo-finance');  
 var myCallback = function(stockList) {    
@@ -14,4 +15,6 @@ var myCallback = function(stockList) {
                 });  
         });  
 };  
+
 spList.fullList(myCallback);
+```
