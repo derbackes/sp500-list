@@ -1,4 +1,16 @@
-Examples
+Usage
+=====
+var spList = require('sp500-list');  
+spList.fullList(callback);
+
+That's it. It will return a JS object formatted:  
+[{ ticker: 'AAPL'},  
+{ticker: 'GOOG'},  
+{ticker: 'MMM'}]  
+
+But with all 500 ticker symbols
+
+Example
 ========
 
 This will grab stock quotes from Yahoo Finance for the entire S&P 500
