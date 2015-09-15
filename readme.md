@@ -1,5 +1,10 @@
-Usage
+S&P 500 Stock List
 =====
+
+## Installation
+npm install sp500-list
+
+## Usage
 var spList = require('sp500-list');  
 spList.fullList(callback);
 
@@ -10,8 +15,7 @@ That's it. It will return a JS object formatted:
 
 But with all 500 ticker symbols
 
-Example
-========
+## Example
 
 This will grab stock quotes from Yahoo Finance for the entire S&P 500
 ```
@@ -32,3 +36,5 @@ var myCallback = function(stockList) {
 
 spList.fullList(myCallback);
 ```
+## Release History
+1.0 - Getting it up and running. Stick requires a better css selector 
