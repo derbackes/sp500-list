@@ -3,7 +3,7 @@ var request = require('request'),
 
 
 module.exports = {
-  fullList: function() {
+  fullList: function(callback) {
     // This is the basline URL from Wikipedia
     var url = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies';
     // Sadly, trying to get the css selector to work without this
@@ -12,7 +12,7 @@ module.exports = {
     var isPastList = false;
 
     // Go grab the webpage
-    request(url, function(err, resp, body){
+    var returnList = request(url, function(err, resp, body){
       // The array of stocks
       var stockList = [];
 
@@ -35,7 +35,7 @@ module.exports = {
         }
       });
       //console.log(stockList);
-      return stockList;
+      callback(stockList);
     });
   },
 
