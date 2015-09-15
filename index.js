@@ -13,6 +13,9 @@ module.exports = {
 
     // Go grab the webpage
     request(url, function(err, resp, body){
+      // The array of stocks
+      var stockList = [];
+
       // Get cheerio started
       $ = cheerio.load(body);
       // Sep, 2015 - There are two tables on the page with data
@@ -23,9 +26,16 @@ module.exports = {
         }
         if(!isPastList) {
           // Then we are in the list of S&P stocks, keep going
-          console.log($(this).text());
+          //console.log($(this).text());
+          // Double check that it is not empty
+          var data = {
+            ticker: $(this).text()
+          };
+          stockList.push(data);
         }
       });
+      //console.log(stockList);
+      return stockList;
     });
   },
 
