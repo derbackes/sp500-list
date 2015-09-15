@@ -1,0 +1,22 @@
+{
+  "name": "sp500-list",
+  "version": "1.0.0",
+  "description": "Simple module to grab the list of SP500 stocks from Wikipedia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derbackes/sp500-list.git"
+  },
+  "keywords": [
+    "stocks"
+  ],
+  "author": "Michael Backes <npm@michaelbackes.com> (https://twitter.com/derbackes)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derbackes/sp500-list/issues"
+  },
+  "homepage": "https://github.com/derbackes/sp500-list#readme"
+}
