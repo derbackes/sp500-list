@@ -28,10 +28,12 @@ module.exports = {
           // Then we are in the list of S&P stocks, keep going
           //console.log($(this).text());
           // Double check that it is not empty
-          var data = {
-            ticker: $(this).text()
-          };
-          stockList.push(data);
+          if($(this).text().trim()) {
+            var data = {
+              ticker: $(this).text()
+            };
+            stockList.push(data);
+          }
         }
       });
       //console.log(stockList);
